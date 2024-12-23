@@ -72,8 +72,6 @@ const App = () => {
           </ul>
         </section>
       </main>
-
-      {/* Başka İçerikler */}
       <div className="headings-container">
         <h2 className="heading-first-heading">Designed for the full journey</h2>
         <h2 className="heading">Organization design</h2>
