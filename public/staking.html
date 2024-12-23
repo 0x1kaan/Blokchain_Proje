@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAO Staking Platform</title>
+  <style>
+    /* General Settings */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #001f3f; /* Navy blue */
+      color: #ffffff;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #003366; /* Dark navy */
+      padding: 20px 0;
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+      max-width: 1200px;
+    }
+
+    .logo {
+      font-size: 28px;
+      color: #66b3ff; /* Light blue */
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .menu {
+      list-style: none;
+      float: right;
+    }
+
+    .menu li {
+      display: inline;
+      margin-left: 20px;
+    }
+
+    .menu a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .menu a:hover {
+      color: #66b3ff;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #003366, #00509e);
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 22px;
+    }
+
+    /* Staking and Voting Section */
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .stake-box,
+    .vote-box {
+      margin: 20px auto;
+      max-width: 400px;
+      display: flex;
+      justify-content: center;
+    }
+
+    input, select {
+      padding: 15px;
+      width: 70%;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 15px 30px;
+      background-color: #66b3ff; /* Light blue */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #3399ff;
+    }
+
+    /* Rewards Section */
+    .dark-section {
+      background-color: #003366;
+    }
+
+    .reward-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .reward-card {
+      background: #00264d;
+      padding: 30px;
+      border-radius: 8px;
+      width: 300px;
+    }
+
+    .reward-card h3 {
+      color: #66b3ff;
+    }
+
+    .result-message {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #003366;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">DAO Platform</a>
+      <ul class="menu">
+        <li><a href="#staking">Staking</a></li>
+        <li><a href="#rewards">Rewards</a></li>
+        <li><a href="#voting">Voting</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <h1>DAO Staking and Voting Platform</h1>
+      <p>Stake your tokens, earn rewards, and participate in voting.</p>
+    </div>
+  </header>
+
+  <!-- Staking Section -->
+  <section id="staking" class="section">
+    <div class="container">
+      <h2>Staking</h2>
+      <p>Earn rewards by staking your tokens.</p>
+      <div class="stake-box">
+        <input type="number" id="stake-amount" placeholder="Enter amount" required>
+        <button onclick="stakeTokens()">Stake</button>
+      </div>
+      <p id="stake-result" class="result-message"></p>
+    </div>
+  </section>
+
+  <!-- Rewards Section -->
+  <section id="rewards" class="section dark-section">
+    <div class="container">
+      <h2>Rewards</h2>
+      <div class="reward-grid">
+        <div class="reward-card">
+          <h3>7% Annual Interest</h3>
+          <p>Earn high returns on staked tokens.</p>
+        </div>
+        <div class="reward-card">
+          <h3>DAO Bonuses</h3>
+          <p>Opportunities to earn extra bonuses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voting Section -->
+  <section id="voting" class="section">
+    <div class="container">
+      <h2>Voting</h2>
+      <p>Vote on DAO decisions.</p>
+      <div class="vote-box">
+        <select id="vote-option">
+          <option value="option1">Development Fund</option>
+          <option value="option2">New Projects</option>
+        </select>
+        <button onclick="vote()">Vote</button>
+      </div>
+      <p id="vote-result" class="result-message"></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 DAO Platform. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

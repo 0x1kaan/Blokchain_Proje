@@ -17,31 +17,30 @@
     <title>CollevtiveDAO</title>
     <style>
       *, *::before, *::after {
-  box-sizing: border-box; /* Box modelinin düzgün çalışması için */
-}
-.hero {
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fbfbef;
-  width: 100%;
-  margin-top: 80px; /* Match with navbar height */
-  padding: 100px 20px;
-  background-color: #0B0F33; /* Body ile aynı renk */
-  padding: 50px 0; /* Üst ve alt boşluk */
-}
-.hero-container {
-  max-width: 1200px; /* Centralize and limit the hero width */
-  margin: 0 auto;
-}
+        box-sizing: border-box;
+      }
+      .hero {
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fbfbef;
+        width: 100%;
+        margin-top: 80px;
+        padding: 100px 20px;
+        background-color: #0B0F33;
+        padding: 50px 0;
+      }
+      .hero-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
       .hero-content {
         max-width: 800px;
         margin: 0 auto;
-        text-align: center; /* Metni ortala */
-}
-      
+        text-align: center;
+      }
       .hero h1 {
         font-size: 5.8rem;
         font-weight: bold;
@@ -72,7 +71,6 @@
         color: #f2f2ed;
         padding: 15px;
         border-radius: 5px;
-        background: linear-gradient(135deg, #0B0F33, #00BFAE, #A020F0); 
         z-index: 1000;
         width: 90%;
         max-width: 350px;
@@ -81,13 +79,10 @@
         left: 50%;
         transform: translateX(-50%);
       }
-
       .nav-menu {
         position: relative;
         background-color: linear-gradient(135deg, #0B0F33, #00BFAE, #A020F0);
-
       }
-
       .wallet-menu.visible {
         display: block;
       }
@@ -100,11 +95,11 @@
       <nav class="nav-menu">
         <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; align-items: center;">
           <h1>CollectiveDAO</h1>
-          <li><a href="#home">Product</a></li>
-          <li><a href="#Explore">Use cases</a></li>
-          <li><a href="#Notification">Learn</a></li>
-          <li><a href="#profile">About</a></li>
-          <li><a href="#profile">Jobs</a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#cases">Use cases</a></li>
+          <li><a href="#learn">Learn</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#jobs">Jobs</a></li>
           <li style="position: relative;">
             <button id="walletToggle" class="cta-button">Login</button>
             <div id="walletMenu" class="wallet-menu">
@@ -121,7 +116,6 @@
         const walletMenu = document.getElementById("walletMenu");
         const walletAddressDisplay = document.getElementById("walletAddress");
         const logoutLink = document.getElementById("logoutLink");
-
 
         walletToggle.addEventListener("click", (event) => {
           event.preventDefault();
@@ -163,32 +157,26 @@
         <form>
             <input type="email" placeholder="E-posta adresinizi girin" required>
             <br>
-            <button type="submit">Subscrible</button>
+            <button type="submit">Abone Ol</button>
         </form>          
-          </div>
-        </div>
-        <h1>Help at everry step</h1>
-        <div class="container1">
-            <div class="item"><strong>Success managers</strong> <span>🔗</span></div>
-            <div class="item"><strong>Knowledge base</strong> <span>🔗</span></div>
-            <div class="item"><strong>Chat support</strong> <span>🔗</span></div>
-            <div class="item"><strong>Tutorials</strong> <span>🔗</span></div>
-            <div class="item"><strong>Templates</strong> <span>🔗</span></div>
-            <div class="item"><strong>Smart Contract developer</strong> <span>🔗</span></div>
-            <div class="item"><strong>Events</strong> <span>🔗</span></div>
-            <div class="item"><strong>Educhain</strong> <span>🔗</span></div>
-            <div class="item"><strong>Guides</strong> <span>🔗</span></div>
-            </div>
-            <h1>What is your DAO idea</h1>
+    </div>
+    <h1>Help at every step</h1>
+    <div class="container1">
+        <div class="item"><strong>Success managers</strong> <span>🔗</span></div>
+        <div class="item"><strong>Knowledge base</strong> <span>🔗</span></div>
+        <div class="item"><strong>Chat support</strong> <span>🔗</span></div>
+        <div class="item"><strong>Tutorials</strong> <span>🔗</span></div>
+        <div class="item"><strong>Templates</strong> <span>🔗</span></div>
+        <div class="item"><strong>Smart Contract developer</strong> <span>🔗</span></div>
+        <div class="item"><strong>Events</strong> <span>🔗</span></div>
+        <div class="item"><strong>Educhain</strong> <span>🔗</span></div>
+        <div class="item"><strong>Guides</strong> <span>🔗</span></div>
+    </div>
+    <h1>What is your DAO idea</h1>
     <h2>Let's chat and see how we can help</h2>
-
     <div class="button-container">
-        <button class="button1">
-            Telegram
-        </button>
-        <button class="button2">
-            Email
-        </button>
+        <button class="button1">Telegram</button>
+        <button class="button2">Email</button>
     </div>
     <footer>
       <div class="footer-container">
@@ -196,7 +184,7 @@
           <img src="logo.png" alt="Logo" />
         </div>
         <div class="footer-links">
-          <h1>CollectiveDAO</h1> 
+          <h1>CollectiveDAO</h1>
           <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Jobs</a></li>
@@ -204,12 +192,6 @@
           </ul>
         </div>
       </div>
-      <div class="footer-text">
-        <p>© 2024 Tüm Hakları Saklıdır</p>
-      </div>
     </footer>
-    
-
-        
-</body>
+  </body>
 </html>
