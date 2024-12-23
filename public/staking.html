@@ -29,10 +29,13 @@
     .logo {
       font-size: 2
 
-    .menu {
-      list-style: none;
-      float: right;
-    }
+     .menu {
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      height: 60px;  
+      padding: 0;  
+  }
 
     .menu li {
       display: inline;
@@ -46,9 +49,14 @@
       transition: color 0.3s;
     }
 
-    .menu a:hover {
-      color: #66b3ff;
-    }
+     .menu a {
+       color: #ffffff;
+       text-decoration: none;
+       font-size: 25px;
+       transition: color 0.3s;
+       padding: 5px 10px;  
+       line-height: 1;  
+   }
 
     /* Hero Section */
     .hero {
