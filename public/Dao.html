@@ -7,34 +7,36 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e1e2f, #141421);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1d1f26;
             color: #fff;
             overflow-x: hidden;
         }
         header {
-            padding: 1rem;
+            padding: 1.5rem;
             text-align: center;
-            background: #141421;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            background-color: #141421;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
         header h1 {
-            font-size: 2rem;
-            color: #00eaff;
+            font-size: 2.5rem;
+            color: #fff;
+            margin: 0;
         }
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 2rem;
+            padding: 3rem 1rem;
         }
         .form-section {
             flex: 1;
             max-width: 450px;
             padding: 2rem;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
+            background-color: #252a35;
+            border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin: 1rem;
         }
         .form-section h2 {
             margin-bottom: 1.5rem;
@@ -51,14 +53,15 @@
             margin-bottom: 1rem;
             border: none;
             border-radius: 5px;
-            background: #1e1e2f;
+            background-color: #333b48;
             color: #fff;
+            font-size: 1rem;
         }
         .form-section button {
             width: 100%;
             padding: 0.8rem;
             font-size: 1rem;
-            background: linear-gradient(90deg, #00eaff, #0073ff);
+            background-color: #00eaff;
             border: none;
             border-radius: 5px;
             color: #fff;
@@ -73,9 +76,10 @@
             max-width: 450px;
             margin-left: 2rem;
             padding: 2rem;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
+            background-color: #252a35;
+            border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-top: 2rem;
         }
         .preview-section h2 {
             margin-bottom: 1.5rem;
@@ -83,11 +87,45 @@
         }
         .preview-box {
             padding: 1rem;
-            background: #1e1e2f;
-            border: 1px solid #0073ff;
+            background-color: #333b48;
+            border: 1px solid #00eaff;
             border-radius: 5px;
-            color: #ddd;
-            font-size: 0.9rem;
+            color: #d1d1d1;
+            font-size: 1rem;
+        }
+        .button2 {
+            width: 20%;
+            padding: 1rem;
+            font-size: 1rem;
+            background-color: #00eaff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin: 2rem auto;
+            display: block;
+            text-align: center;
+        }
+        .button2:hover {
+            transform: scale(1.1);
+        }
+        .get-started-btn {
+            display: block;
+            width: 200px;
+            padding: 1rem;
+            background-color: #00eaff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            text-align: center;
+            margin: 2rem auto;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .get-started-btn:hover {
+            transform: scale(1.05);
         }
         .background-animation {
             position: absolute;
@@ -102,7 +140,7 @@
             position: absolute;
             width: 100px;
             height: 100px;
-            background: rgba(0, 255, 255, 0.2);
+            background: rgba(0, 234, 255, 0.2);
             border-radius: 50%;
             animation: float 6s infinite ease-in-out;
         }
@@ -113,23 +151,6 @@
             50% {
                 transform: translateY(-20px);
             }
-        }
-        .button2 {
-            width: 20%;
-            padding: 1rem;
-            font-size: 1rem;
-            background: linear-gradient(90deg, #00eaff, #0073ff);
-            border: none;
-            border-radius: 5px;
-            color: #fff;
-            cursor: pointer;
-            transition: transform 0.3s;
-            margin: 2rem auto;
-            display: block;
-            text-align: center;
-        }
-        .button2:hover {
-            transform: scale(1.1);
         }
     </style>
 </head>
@@ -157,7 +178,7 @@
                 <option value="weighted">Weighted Voting</option>
                 <option value="quadratic">Quadratic Voting</option>
             </select>
-            <button>Create DAO</button>
+            <button onclick="createDAO()">Create DAO</button>
         </div>
         <div class="preview-section">
             <h2>Preview</h2>
@@ -170,5 +191,20 @@
         </div>
     </div>
     <button class="button2" onclick="window.location.href='staking.html'">Go to Staking</button>
+    <button class="get-started-btn" onclick="window.location.href='dao.html'">Get Started</button>
+
+    <script>
+        function createDAO() {
+            var daoName = document.getElementById('dao-name').value;
+            var daoPurpose = document.getElementById('dao-purpose').value;
+            var tokenDetails = document.getElementById('token-details').value;
+            var votingMechanism = document.getElementById('voting-mechanism').value;
+
+            document.getElementById('preview-dao-name').innerText = daoName || "N/A";
+            document.getElementById('preview-dao-purpose').innerText = daoPurpose || "N/A";
+            document.getElementById('preview-token-details').innerText = tokenDetails || "N/A";
+            document.getElementById('preview-voting-mechanism').innerText = votingMechanism || "N/A";
+        }
+    </script>
 </body>
 </html>

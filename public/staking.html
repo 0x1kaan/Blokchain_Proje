@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,138 +11,194 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #001f3f; /* Navy blue */
-      color: #ffffff;
+      background-color: #121212;
+      /* Dark background */
+      color: #f1f1f1;
+      /* Light text for contrast */
     }
 
     /* Navbar */
     .navbar {
-      background-color: #003366; /* Dark navy */
-      padding: 20px 0;
+      background-color: #1e2a3a;
+      /* Dark blue */
+      padding: 20px;
     }
 
-    .container {
-      width: 90%;
-      margin: auto;
-      max-width: 1200px;
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
-      font-size: 2
+      font-size: 24px;
+      font-weight: bold;
+      color: #65aEDD;
+      /* Light blue */
+    }
 
-     .menu {
+    .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
       display: flex;
-      align-items: center;
-      justify-content: center; 
-      height: 60px;  
-      padding: 0;  
-  }
+      gap: 30px;
+    }
 
     .menu li {
       display: inline;
-      margin-left: 20px;
     }
 
     .menu a {
-      color: #ffffff;
+      color: #f1f1f1;
+      /* White text */
       text-decoration: none;
       font-size: 18px;
+      font-weight: bold;
       transition: color 0.3s;
     }
 
-     .menu a {
-       color: #ffffff;
-       text-decoration: none;
-       font-size: 25px;
-       transition: color 0.3s;
-       padding: 5px 10px;  
-       line-height: 1;  
-   }
+    .menu a:hover {
+      color: #65aEDD;
+      /* Light blue */
+    }
 
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(135deg, #003366, #00509e);
+      padding: 150px 20px;
+      background: linear-gradient(135deg, #2f3b49, #1e2a3a);
+      /* Dark gradient */
+      border-bottom: 5px solid #65aEDD;
+      /* Accent line */
     }
 
     .hero h1 {
       font-size: 50px;
       margin: 0;
+      font-weight: 700;
+      color: #fff;
+      /* White */
     }
 
     .hero p {
       font-size: 22px;
+      margin: 10px 0;
+      font-weight: 300;
+      color: #d3d3d3;
+      /* Light grey */
     }
 
-    /* Staking and Voting Section */
+    /* Section General */
     .section {
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
 
-    .stake-box,
-    .vote-box {
-      margin: 20px auto;
-      max-width: 400px;
+    .dark-section {
+      background-color: #1e2a3a;
+    }
+
+    /* Staking and Voting Boxes */
+    .action-box {
+      margin: 30px auto;
+      max-width: 500px;
       display: flex;
+      gap: 15px;
       justify-content: center;
+      align-items: center;
     }
 
-    input, select {
+    .action-box input,
+    .action-box select {
+      flex: 1;
       padding: 15px;
-      width: 70%;
       border: none;
-      border-radius: 5px;
-      margin-right: 10px;
+      border-radius: 8px;
+      background-color: #3a4c65;
+      /* Dark greyish blue */
+      color: white;
+      font-size: 16px;
     }
 
-    button {
-      padding: 15px 30px;
-      background-color: #66b3ff; /* Light blue */
+    .action-box button {
+      padding: 15px 20px;
+      background-color: #65aEDD;
+      /* Light blue */
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
+      font-size: 16px;
       transition: background-color 0.3s;
     }
 
-    button:hover {
-      background-color: #3399ff;
-    }
-
-    /* Rewards Section */
-    .dark-section {
-      background-color: #003366;
-    }
-
-    .reward-grid {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .reward-card {
-      background: #00264d;
-      padding: 30px;
-      border-radius: 8px;
-      width: 300px;
-    }
-
-    .reward-card h3 {
-      color: #66b3ff;
+    .action-box button:hover {
+      background-color: #3d8ec9;
+      /* Slightly darker blue */
     }
 
     .result-message {
-      font-size: 18px;
-      margin-top: 15px;
+      font-size: 16px;
+      margin-top: 20px;
+      font-weight: 300;
+      color: #d3d3d3;
+      /* Light grey */
+    }
+
+    /* Rewards Section */
+    .reward-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .reward-card {
+      background: #2f3b49;
+      /* Dark greyish blue */
+      padding: 40px;
+      border-radius: 12px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .reward-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .reward-card h3 {
+      color: #65aEDD;
+      /* Light blue */
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .reward-card p {
+      color: #f1f1f1;
+      /* White */
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1e2a3a;
+      padding: 20px 0;
+      text-align: center;
+      color: #f1f1f1;
+      font-size: 14px;
     }
   </style>
 </head>
+
 <body>
   <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
+      <div class="logo">DAO Platform</div>
       <ul class="menu">
         <li><a href="#staking">Staking</a></li>
         <li><a href="#rewards">Rewards</a></li>
@@ -153,8 +210,8 @@
   <!-- Hero Section -->
   <header class="hero">
     <div class="container">
-      <h1>DAO Staking and Voting Platform</h1>
-      <p>Stake your tokens, earn rewards, and participate in voting.</p>
+      <h1>DAO Staking & Voting</h1>
+      <p>Stake your tokens, earn rewards, and participate in governance decisions.</p>
     </div>
   </header>
 
@@ -162,9 +219,9 @@
   <section id="staking" class="section">
     <div class="container">
       <h2>Staking</h2>
-      <p>Earn rewards by staking your tokens.</p>
-      <div class="stake-box">
-        <input type="number" id="stake-amount" placeholder="Enter amount" required>
+      <p>Stake your tokens to earn rewards and help govern the DAO.</p>
+      <div class="action-box">
+        <input type="number" id="stake-amount" placeholder="Enter amount to stake" required>
         <button onclick="stakeTokens()">Stake</button>
       </div>
       <p id="stake-result" class="result-message"></p>
@@ -178,11 +235,11 @@
       <div class="reward-grid">
         <div class="reward-card">
           <h3>7% Annual Interest</h3>
-          <p>Earn high returns on staked tokens.</p>
+          <p>Earn returns on your staked tokens, compounded annually.</p>
         </div>
         <div class="reward-card">
           <h3>DAO Bonuses</h3>
-          <p>Opportunities to earn extra bonuses.</p>
+          <p>Earn bonuses for participating in DAO governance.</p>
         </div>
       </div>
     </div>
@@ -192,8 +249,8 @@
   <section id="voting" class="section">
     <div class="container">
       <h2>Voting</h2>
-      <p>Vote on DAO decisions.</p>
-      <div class="vote-box">
+      <p>Participate in DAO governance and vote on important decisions.</p>
+      <div class="action-box">
         <select id="vote-option">
           <option value="option1">Development Fund</option>
           <option value="option2">New Projects</option>
@@ -203,5 +260,11 @@
       <p id="vote-result" class="result-message"></p>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 DAO Staking Platform | All Rights Reserved</p>
+  </footer>
 </body>
+
 </html>

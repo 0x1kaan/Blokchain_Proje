@@ -1,0 +1,18 @@
+project/
+├── backend/               # Node.js backend
+│   ├── src/
+│   │   ├── controllers/   # API controller'lar
+│   │   ├── routes/        # API rotaları
+│   │   ├── models/        # Veritabanı modelleri
+│   │   ├── services/      # İş mantığı
+│   │   └── app.js         # Express.js başlangıç dosyası
+│   └── package.json
+├── frontend/              # React frontend
+│   ├── public/
+│   ├── src/
+│   │   ├── components/    # React bileşenleri
+│   │   ├── pages/         # Sayfa bileşenleri
+│   │   ├── services/      # API çağrıları
+│   │   └── App.js         # Ana uygulama dosyası
+│   └── package.json
+└── README.md
